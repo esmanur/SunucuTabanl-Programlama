@@ -1,6 +1,8 @@
 <?php
 
 //tanımlamaları yapıyoruz değişken atamaları
+//Post yönteminde sorgular gizli bir şekilde gönderilir. Kullanıcı adı ve şifre gibi özel bilgilerde kullanılır.
+
 $eposta=$_POST['eposta'];
 $sifre=$_POST['sifre'];
 
@@ -28,6 +30,8 @@ if(isset($_POST['eposta'])&&isset($_POST['sifre'])){
 // eğer hotmailse oys ye yönlen
 if($durum=="@hotmail.com"){
 //header girdiğimiz urlyi otomatik açıyor. refresh ise 2 saniye sonra oys sayfasın aç demek
+// echo yazdırıyor. açmadan önce siteyi ekranda bilgilendirmek için yazdım
+	echo "www.oys.deu.edu.tr adresine yönlendiriliyorsunuz";
 	header("Refresh: 2; url=http://oys.deu.edu.tr/"); 
 }
 //hotmail değilse oys2 ye yönlen.
