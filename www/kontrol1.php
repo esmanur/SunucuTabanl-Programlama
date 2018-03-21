@@ -17,7 +17,8 @@ echo"<script>alert('Hoşgeldiniz $eposta')</script>";
 }*/
 
 function hosgeldin_alert(){
-	echo"<script>alert('Hosgeldiniz')</script>";
+	$eposta=$_POST['eposta'];
+	echo"<script>alert('Hosgeldiniz $eposta')</script>";
 }
 ###<script>alert('Kullanıcının Göreceği Mesaj')</script>
 
